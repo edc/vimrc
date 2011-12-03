@@ -1,31 +1,59 @@
-colorscheme macvim
-"colo moria
+"colorscheme macvim
+colo moria
 highlight Folded guibg=#3f3f3f guifg=#aaaaaa
 set lines=100
-set columns=80
+set columns=192
 set guioptions-=T
 set showtabline=2
 set guifont=consolas:h14
+set linespace=15
 set bg=dark
 set hlsearch
 set smartcase
 
 "window 
-nmap \s :new<CR>
-nmap \v :vne<CR>
-nmap \o <C-w>o
-nmap \c <C-w>c
-nmap \j <C-w>j
-nmap \k <C-w>k
-nmap \h <C-w>h
-nmap \l <C-w>l
-nmap \t <C-w>t
-nmap \p <C-w>p
-nmap \x <C-w>x
+let mapleader = ","
+nmap <Leader>s :new<CR>
+nmap <Leader>v :vne<CR>
+nmap <Leader>o <C-w>o
+nmap <Leader>c <C-w>c
+nmap <Leader>j <C-w>j
+nmap <Leader>k <C-w>k
+nmap <Leader>h <C-w>h
+nmap <Leader>l <C-w>l
+nmap <Leader>t <C-w>t
+nmap <Leader>p <C-w>p
+nmap <Leader>x <C-w>x
 
 "fullscreen
 set fuoptions=maxhorz
 
 "NERDTree
-let g:NERDTreeQuitOnOpen=1
+let g:NERDTreeQuitOnOpen=0
 let g:NERDTreeShowBookmarks=1
+
+"Command-t
+nnoremap <silent> <Leader>t :CommandT<CR>
+nnoremap <silent> <Leader>T :CommandTBuffer<CR>
+
+"highlighting log
+:au BufRead log syntax manual
+:au BufRead log syn match mdTopic "#[a-zA-Z-_]\+"
+:au BufRead log hi link mdTopic Type
+:au BufRead log syn region Date start="^Date: \d\{1,2\}\/\d\{1,2\}\/\d\{4\}" end="$"
+:au BufRead log hi link Date Underlined
+:au BufRead log syn region ModeLine start="^\~\~\~\~" end="$"
+:au BufRead log hi ModeLine guibg=bg guifg=#404040 gui=none
+:au BufRead log syn match Link "\[[^]]\+\_s*[^]]\+\](http:.*)" contains=@NoSpell
+:au BufRead log hi Link guibg=bg guifg=#8080d0 gui=none
+:au BufRead log syn match CodeBlock "[0-9a-zA-Z]\+[A-Z][0-9a-zA-Z]*" contains=@NoSpell
+:au BufRead log syn match CodeBlock "[a-zA-Z~]*\/[^ ]\+\/[^ ]*" contains=@NoSpell
+:au BufRead log syn match hashtag "#[0-9a-zA-Z-_]\+" contains=@NoSpell
+:au BufRead log hi link hashtag Underlined 
+:au BufRead log syn region CodeBlock start="^\t" end="$" contains=@NoSpell
+:au BufRead log syn region CodeBlock start="`" end="`" contains=@NoSpell
+:au BufRead log hi link CodeBlock String
+:au BufRead log syn region BlockQuote start="^>" end="^\s*$"
+:au BufRead log hi BlockQuote guibg=bg guifg=#40d040 gui=italic
+:au BufRead log syn region Strike start="<s>" end="</s>"
+:au BufRead log hi Strike guibg=bg guifg=#666666 gui=none
