@@ -2,7 +2,8 @@
 colo moria
 highlight Folded guibg=#3f3f3f guifg=#aaaaaa
 set lines=100
-set columns=192
+set columns=300
+set colorcolumn=80
 set guioptions-=T
 set showtabline=2
 set guifont=consolas:h14
@@ -57,3 +58,7 @@ nnoremap <silent> <Leader>T :CommandTBuffer<CR>
 :au BufRead log hi BlockQuote guibg=bg guifg=#40d040 gui=italic
 :au BufRead log syn region Strike start="<s>" end="</s>"
 :au BufRead log hi Strike guibg=bg guifg=#666666 gui=none
+
+"omnicomplete
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif

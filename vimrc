@@ -10,8 +10,12 @@ nmap <D-E> :NERDTree
 call pathogen#infect()
 
 "coffee
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+"au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 au BufNewFile,BufReadPost *.coffee setl sw=4 ts=4 expandtab
+
+"color override
+hi Comment guifg=#aa4444 gui=italic
+hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
 
 "basic setup
 set hidden
@@ -22,4 +26,4 @@ set visualbell
 set noerrorbells
 set nobackup
 set nocompatible
-
+set cursorcolumn

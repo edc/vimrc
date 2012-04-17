@@ -2608,9 +2608,9 @@ function! s:initNerdTree(name)
 
     call s:renderView()
     let s:fullscreen = &fu
-    if !s:fullscreen
-        set columns=112
-    endif
+    "if !s:fullscreen
+    "    set columns=112
+    "endif
     call b:NERDTreeRoot.putCursorHere(0, 0)
 endfunction
 
