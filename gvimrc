@@ -62,3 +62,15 @@ nnoremap <silent> <Leader>T :CommandTBuffer<CR>
 "omnicomplete
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"
+"color override
+hi Comment guifg=#aa4444 gui=italic
+hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
+
+"rope
+let $PYTHONPATH .= ":/Users/caoyi3/devel/_envs/vim/lib/python2.7/site-packages"
+source /Users/caoyi3/devel/_envs/vim/share/vim/plugin/ropevim.vim
+let ropevim_vim_completion=1
+
+"keyboard
+set macmeta
