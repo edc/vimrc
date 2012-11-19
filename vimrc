@@ -44,3 +44,5 @@ syntax on
 "color override
 hi Comment guifg=#aa4444 gui=italic
 hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
