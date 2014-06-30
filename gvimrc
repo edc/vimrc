@@ -2,15 +2,16 @@
 colo moria
 highlight Folded guibg=#3f3f3f guifg=#aaaaaa
 set lines=100
-set columns=300
+"set columns=300
 set colorcolumn=80
 set guioptions-=T
 set showtabline=2
-set guifont=consolas:h14
-set linespace=15
+set guifont=consolas:h12
+set linespace=5
 set bg=dark
 set hlsearch
 set smartcase
+set nu
 
 "window 
 let mapleader = ","
@@ -26,8 +27,14 @@ nmap <Leader>t <C-w>t
 nmap <Leader>p <C-w>p
 nmap <Leader>x <C-w>x
 
+"font size
+nmap <Leader>= :set guifont=Consolas:h14 linespace=15<CR>
+nmap <Leader>- :set guifont=Consolas:h12 linespace=5<CR>
+
 "fullscreen
-set fuoptions=maxhorz
+set fuoptions=maxvert,maxhorz
+nmap <Leader>f :set fullscreen!<CR>
+
 
 "NERDTree
 let g:NERDTreeQuitOnOpen=0
@@ -67,10 +74,10 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 hi Comment guifg=#aa4444 gui=italic
 hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
 
-"rope
-let $PYTHONPATH .= ":/Users/caoyi3/devel/_envs/vim/lib/python2.7/site-packages"
-source /Users/caoyi3/devel/_envs/vim/share/vim/plugin/ropevim.vim
-let ropevim_vim_completion=1
 
 "keyboard
 set macmeta
+
+"syntastic
+let g:syntastic_python_checkers = ['pep8']
+
