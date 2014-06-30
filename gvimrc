@@ -23,7 +23,6 @@ nmap <Leader>j <C-w>j
 nmap <Leader>k <C-w>k
 nmap <Leader>h <C-w>h
 nmap <Leader>l <C-w>l
-nmap <Leader>t <C-w>t
 nmap <Leader>p <C-w>p
 nmap <Leader>x <C-w>x
 
@@ -39,10 +38,6 @@ nmap <Leader>f :set fullscreen!<CR>
 "NERDTree
 let g:NERDTreeQuitOnOpen=0
 let g:NERDTreeShowBookmarks=1
-
-"Command-t
-nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>T :CommandTBuffer<CR>
 
 "highlighting log
 :au BufRead log syntax manual

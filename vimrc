@@ -40,7 +40,10 @@ syntax on
 
 "CtrlP
 nnoremap <silent> <Leader>t :CtrlP<CR>
-nnoremap <silent> <Leader>T :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>T :CtrlPTag<CR>
+nnoremap <silent> <Leader>d :CtrlPBookmarkDir<CR>
+nnoremap <silent> <Leader>C :CtrlPChange<CR>
+let g:ctrlp_extensions = ['tag', 'undo', 'changes', 'bookmarkdir']
 
 "color override
 hi Comment guifg=#aa4444 gui=italic
