@@ -46,3 +46,10 @@ hi Comment guifg=#aa4444 gui=italic
 hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+"taglist
+let Tlist_Use_Right_Window = 1
+let g:Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+let Tlist_Compact_Format = 1
+nnoremap <silent> <Leader>i :TlistOpen<CR>
+nnoremap <silent> <Leader>o :TlistToggle<CR>
+
