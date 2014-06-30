@@ -37,3 +37,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/python-indent"]
+	path = bundle/python-indent
+	url = https://github.com/edc/python-indent.git
