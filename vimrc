@@ -46,6 +46,11 @@ hi Comment guifg=#aa4444 gui=italic
 hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+"remote editing
+let g:netrw_http_cmd="wget"
+let g:netrw_http_xcmd="-q -O"
+
 "taglist
 let Tlist_Use_Right_Window = 1
 let g:Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
