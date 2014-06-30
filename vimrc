@@ -59,3 +59,4 @@ let Tlist_Compact_Format = 1
 nnoremap <silent> <Leader>i :TlistOpen<CR>
 nnoremap <silent> <Leader>o :TlistToggle<CR>
 
+source ~/.vim/counsyl.vim
