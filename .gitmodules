@@ -40,3 +40,6 @@
 [submodule "bundle/python-indent"]
 	path = bundle/python-indent
 	url = https://github.com/edc/python-indent.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git

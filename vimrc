@@ -37,6 +37,11 @@ set nobackup
 set nocompatible
 set cursorcolumn
 syntax on
+
+"CtrlP
+nnoremap <silent> <Leader>t :CtrlP<CR>
+nnoremap <silent> <Leader>T :CtrlPBuffer<CR>
+
 "color override
 hi Comment guifg=#aa4444 gui=italic
 hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
