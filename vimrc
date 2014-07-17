@@ -1,5 +1,6 @@
 set modelines=5
 set formatoptions+=r
+set wildignore+=*.pyc
 nmap <D-e> :NERDTree<CR>
 nmap <D-E> :NERDTree 
 
@@ -61,5 +62,8 @@ let g:Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_Compact_Format = 1
 nnoremap <silent> <Leader>i :TlistOpen<CR>
 nnoremap <silent> <Leader>o :TlistToggle<CR>
+
+"nerdtree
+let NERDTreeIgnore = ['\.pyc$']
 
 source ~/.vim/counsyl.vim
