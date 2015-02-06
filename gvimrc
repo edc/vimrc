@@ -74,5 +74,5 @@ hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
 set macmeta
 
 "syntastic
-let g:syntastic_python_checkers = ['pep8']
+let g:syntastic_python_checkers = ['flake8']
 
