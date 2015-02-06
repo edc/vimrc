@@ -67,6 +67,6 @@ nnoremap <silent> <Leader>o :TlistToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
 
 "tag
-map <Leader>a :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <Leader>a :sp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 source ~/.vim/counsyl.vim
