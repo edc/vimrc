@@ -69,4 +69,7 @@ let NERDTreeIgnore = ['\.pyc$']
 "tag
 map <Leader>a :sp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+"ES6
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
 source ~/.vim/counsyl.vim
