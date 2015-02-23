@@ -50,6 +50,7 @@ let g:ctrlp_extensions = ['tag', 'undo', 'changes', 'bookmarkdir']
 hi Comment guifg=#aa4444 gui=italic
 hi CursorColumn guibg=#292929 guifg=#ffffff ctermbg=233 ctermfg=230
 highlight ExtraWhitespace ctermbg=red guibg=red
+highlight Folded gui=italic guifg=Grey5 guibg=Grey18
 match ExtraWhitespace /\s\+$/
 
 "remote editing
